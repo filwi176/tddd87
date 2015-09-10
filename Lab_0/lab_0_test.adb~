@@ -1,0 +1,210 @@
+with Ada.Text_IO; use Ada.Text_IO;
+with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
+with Ada.Float_Text_IO; use Ada.Float_Text_IO;
+
+
+Procedure Lab_0_test is
+
+	I:Integer;
+	S:String(1..5);
+	F:Float;
+	C:Character;
+begin
+   
+   
+   New_Line;
+   
+--------------------------------
+   
+   Put("Skriv in ett heltal: ");
+   
+   Get(I);
+   Skip_Line;
+
+   Put("Du skrev ut heltalet ");
+   Put(I,Width => 0);
+   New_Line(2);
+
+   
+   
+   -----------------------------
+   
+   -- Långt/kort avstånd fortfarande?
+   
+   
+   
+   Put("Skriv in fem heltal: ");
+   
+   
+   Get(I);
+   Put("Du skrev in talen: ");
+   Put(I, Width => 1);
+   
+   Get(I);
+   Put(I, Width => 1);
+   
+   Get(I);
+   Put(I, Width => 1);
+   
+   Get(I);
+   Put(I, Width => 1);
+   
+   Get(I);
+   Skip_Line;
+   
+   Put(I, Width => 1);
+   
+
+   
+   
+   
+   New_Line(2);
+   
+   
+   
+   --------------------------------
+   
+   
+   
+   Put("Skriv in ett flyttal: ");
+   
+   Get(F);
+   
+   Skip_Line;
+   
+   Put("Du skrev in flyttalet: ");
+   Put(F, Aft=>3 ,Exp=>0);
+   
+   New_Line(2);
+   
+   
+   ------------------------------------
+   
+   
+   
+   
+   Put("Skriv in ett tecken: ");
+
+   Get(C);
+   Skip_Line;
+   
+   Put("Du skrev tecknet: ");
+   Put(C);
+
+   New_Line(2);
+   
+   ----------------------------------
+   
+
+   Put("Skriv in en sträng med 5 tecken: ");
+   
+   Get(S);
+   Skip_Line;
+   
+   Put("Du skrev in strängen: ");
+   Put(S);
+   
+   New_Line(2);
+
+   
+   
+   
+   ----------------------------------
+   
+   
+   
+   Put("Skriv en sträng med 3 tecken: ");
+   
+   Get_Line(S(1..3),I);
+   
+   
+   Put("Du skrev in strängen: ");
+   Put(S(1..I));
+   
+   New_Line(2);
+   
+   
+   
+   
+   ----------------------------------
+   -- mellanrum??
+   
+   
+   
+   
+   Put("Skriv in ett heltal och en sträng med 5 tecken: ");
+   
+   Get(I);
+   Get(C);
+   Get(S);
+
+   Skip_Line;
+   
+
+   Put("Du skrev in talet |");
+   Put(I,Width=>0);
+   Put("|");
+   
+   Put(" och strägen |"); 
+   Put(S);
+   Put("|");
+   
+   New_Line(2);
+   
+   ----------------------------------
+   
+ --  Hur skriver man citattecken i sträng?
+     
+     
+     Put("Skriv in en sträng med 3 tecken och ett flyttal: ");
+   Get_Line(S(1..3), I);
+   Get(F);
+   
+   Skip_Line;
+   
+   Put("Du skrev in ''");
+   Put(F, Aft=>3 ,Exp=>0 );
+   Put("'' och ''");
+   
+   Put(S(1..I));
+   Put("''.");
+   
+   New_Line(2);
+   
+   
+   
+   ----------------------------------
+   
+   
+   
+   Put("Skriv in en sträng som är maximalt 5 tecken: ");
+   Get_Line(S,I);
+   
+   
+   Put("Du skrev strängen: ");
+   Put(S(1..I));
+   New_Line; 
+   
+   
+   
+   ----------------------------------
+   
+   
+   Put("Skriv in en sträng som är maximalt 5 tecken: ");
+   Get_Line(S,I);
+   
+   
+   Put("Du skrev strängen: ");
+   Put(S(1..I));
+   New_Line; 
+   
+   
+   
+   
+   ----------------------------------
+   
+   
+   
+   
+
+end Lab_0_test;

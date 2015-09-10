@@ -1,0 +1,1 @@
+with ada.text_IO; use ada.Text_IO;
