@@ -136,66 +136,81 @@ procedure Lab_2 is
       
       
    end Vector_Length;
-   
-   
-   
    --------------------------------------------------------------------------
    
    -- Vector length menu-----------------------------------------------------
    procedure Vector_Length_Menu is
       
       Option : Integer;
+      X, Y, Z, Vector : Float;
+      
       
    begin
       loop 
 	 Put ("Return, press 1");
+	 New_Line;
 	 Put ("Calculate, press 2");
+	 New_Line;
+	 Get (Option);
 	 if Option=1 then
 	    exit;
 	 elsif Option=2 then
-	    -- Vector_Length_Function OBS FUNGERAR INTE
+	    Put ("Enter X coordinate: ");
+	    Get (X);
+	    Put ("Enter Y coordinate: ");
+	    Get (Y);
+	    Put ("Enter Z coordinate: ");
+	    Get (Z);
+	    Vector := Vector_Length(X, Y, Z);
+	    Put ("The length of the vector is ");
+	    Put (Vector, Aft=>2, Exp=>0);
+	    Put (".");
+	    New_Line;
+	    exit;
 	 end if;
       end loop;
-      
-      
-      
    end Vector_Length_Menu;
-   
    --------------------------------------------------------------------------
    
    -- Function To_Integer----------------------------------------------------
-   
-   function To_Integer(MyFloat: in Float) return Integer is
-      MyInteger: Integer;
-      
-      
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
 
-   
-  -- Variable for Huvudmeny??
-     Option : Integer;
+      function To_Integer(My_Float: in Float) return Integer is
+      My_Integer: Integer;
+
+   begin;
+   MyInteger:= Integer(Float'Rounding(MyFloat));
+   return My_In
      
+     
+     
+
+
+   -- To_Integer_Menu--------------------------------------------------------------
+   procedure To_Integer_Menu is
+      
+      Option : Integer;
+      Number : Float;     
+     
+   begin 
+      loop 
+	 Put ("Return, press 1");
+	 New_Line;
+	 Put ("Calculate, press 2");
+	 New_Line;
+	 Get (Option);
+	 if Option=1 then
+	    exit;
+	 elsif Option=2 then
+	    Put ("Enter float number to convert to integer: ");
+
+-------------------------------------------------------------------------------   
+  -- Variable for Huvudmeny
+     Option : Integer;
+  
 
 begin
 
-   
-   -- Huvudmeny
+   -- Huvudmeny------------------------------------------------------------------
    
    loop 
       Put ("Radians to degrees, press 1");
@@ -210,22 +225,20 @@ begin
       New_Line;
       Get (Option);
       if Option=1 then
-	 -- To_Degree_menu
 	 To_Degree_Menu;
 
 	 
       elsif Option=2 then
-	 -- To_Radian_menu
 	 To_Radian_Menu;
 	 
-	 --  elsif Option=V then
-	 --  	 -- Underprogrammeny Vector_Length
+      elsif Option=3 then
+	 Vector_Length_Menu;
 	 
-	 --  elsif Option=I then
-	 --  	 -- Underprogrammeny To_Integer
+      elsif Option=4 then
+	 -- Underprogrammeny To_Integer
 	 
-	 --  elsif Option=C then
-	 --  	 -- Underprogrammeny Create_Vector_Data
+      elsif Option=5 then
+	 -- Underprogrammeny Create_Vector_Data
 	 
 	 
       end if;
