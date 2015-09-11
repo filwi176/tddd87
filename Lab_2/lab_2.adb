@@ -179,11 +179,11 @@ procedure Lab_2 is
 
    begin;
    MyInteger:= Integer(Float'Rounding(MyFloat));
-   return My_In
+   return My_Integer;
+   
+   end To_Integer;
      
      
-     
-
 
    -- To_Integer_Menu--------------------------------------------------------------
    procedure To_Integer_Menu is
