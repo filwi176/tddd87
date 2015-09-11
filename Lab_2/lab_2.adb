@@ -174,10 +174,10 @@ procedure Lab_2 is
    -- Function To_Integer----------------------------------------------------
 
       function To_Integer(My_Float: in Float) return Integer is
-      My_Integer: Integer;
+      My_Integer : Integer;
 
-   begin;
-   MyInteger:= Integer(Float'Rounding(MyFloat));
+   begin
+   My_Integer := Integer(Float'Rounding(My_Float));
    return My_Integer;
    
    end To_Integer;
@@ -185,36 +185,38 @@ procedure Lab_2 is
      
 
    -- To_Integer_Menu--------------------------------------------------------------
+
    procedure To_Integer_Menu is
       
       Option : Integer;
-      Number : Float;
-      Integer : Integer;
-
+      Indata : Float;
+      Outdata : Integer;
+      
    begin 
       loop 
-	 Put ("Return, press 1");
-	 New_Line;
-	 Put ("Calculate, press 2");
-	 New_Line;
-	 Get (Option);
-	 if Option=1 then
-	    exit;
-	 elsif Option=2 then
-	    Put ("Enter float number to convert to integer: ");
-	    Get (Float);
-	    Integer := --to_integer_Function
-	      Put ("The closest integer is: ");
-	    Put (Integer);
-	    Put (".");
-	    exit;
-	 end if;
+   	 Put ("Return, press 1");
+   	 New_Line;
+   	 Put ("Calculate, press 2");
+   	 New_Line;
+   	 Get (Option);
+   	 if Option=1 then
+   	    exit;
+   	 elsif Option=2 then
+   	    Put ("Enter float number to convert to integer: ");
+   	    Get (Indata);
+   	    Outdata := To_Integer(Indata);
+   	      Put ("The closest integer is: ");
+   	    Put (Outdata, Width=>0);
+   	    Put (".");
+	    New_Line;
+   	    exit;
+   	 end if;
       end loop;
    end To_Integer_Menu;
-   
-   
-   -- Variable for Huvudmeny
-   Option : Integer;
+ ----------------------------------------------------------------------------------    
+     
+     -- Variable for Huvudmeny
+     Option : Integer;
    
 
 begin
@@ -246,10 +248,10 @@ begin
 	 Vector_Length_Menu;
 	 
       elsif Option=4 then
-	 To_Integer_Menu;
+      	 To_Integer_Menu;
 	 
-      elsif Option=5 then
-	 Create_Vektor_Data_Menu;
+	 --  elsif Option=5 then
+      --  	 Create_Vektor_Data_Menu;
 	 
       end if;
    end loop;
