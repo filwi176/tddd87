@@ -178,6 +178,7 @@ procedure Lab_2 is
       
       Option : Integer;
       Number : Float;
+      Integer : Integer;
       
    begin 
       loop 
@@ -190,15 +191,25 @@ procedure Lab_2 is
 	    exit;
 	 elsif Option=2 then
 	    Put ("Enter float number to convert to integer: ");
-
+	    Get (Float);
+	    Integer := --to_integer_Function
+	      Put ("The closest integer is: ");
+	    Put (Integer);
+	    Put (".");
+	    exit;
+	 end if;
+      end loop;
+   end To_Integer_Menu;
    
-  -- Variable for Huvudmeny
-     Option : Integer;
-  
+   
+   -- Variable for Huvudmeny
+   Option : Integer;
+   
 begin
 
-   -- Huvudmeny------------------------------------------------------------------
+   -- Main meny------------------------------------------------------------------
    
+   --Menu part
    loop 
       Put ("Radians to degrees, press 1");
       New_Line;
@@ -211,10 +222,11 @@ begin
       Put ("To create vector data, press 5");
       New_Line;
       Get (Option);
+      
+      --Action part
       if Option=1 then
 	 To_Degree_Menu;
 
-	 
       elsif Option=2 then
 	 To_Radian_Menu;
 	 
@@ -222,19 +234,12 @@ begin
 	 Vector_Length_Menu;
 	 
       elsif Option=4 then
-	 -- Underprogrammeny To_Integer
+	 To_Integer_Menu;
 	 
       elsif Option=5 then
-	 -- Underprogrammeny Create_Vector_Data
-	 
+	 Create_Vektor_Data_Menu;
 	 
       end if;
-      
-      
    end loop;
-
-   
-   
-   
 end Lab_2;
 
