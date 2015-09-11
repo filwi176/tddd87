@@ -116,7 +116,6 @@ procedure Lab_2 is
    --------------------------------------------------------------------------
 
    -- Function Vector Length-------------------------------------------------
-   
    package My_Elementary_Functions is
       new Ada.Numerics.Generic_Elementary_Functions(Float);
    use My_Elementary_Functions;
