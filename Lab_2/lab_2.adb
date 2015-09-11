@@ -160,46 +160,39 @@ procedure Lab_2 is
       
       
    end Vector_Length_Menu;
+   
+   --------------------------------------------------------------------------
+   
+   -- Function To_Integer----------------------------------------------------
+   
+   function To_Integer(MyFloat: in Float) return Integer is
+      MyInteger: Integer;
+      
+      
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
 
+   
   -- Variable for Huvudmeny??
      Option : Integer;
      
-  -- Variable for Vector_Length
-   X : Float;
-   Y : Float;
-   Z : Float;
-   Length : Float;
 
 begin
-   --  -- Testing Vector_Length
-   
-   --  Put("Testing function Vector_Length. Write X-coordinate: ");
-   --  Get(X);
-   --  Skip_Line;
-   --  Put("Write Y-coordinate: ");
-   --  Get(Y);
-   --  Skip_Line;
-   --  Put("Write Z-coordinate: ");
-   --  Get(Z);
-   --  Skip_Line;
-   
-   --  Length:= Vector_Length(X,Y,Z);
-   
-   
-   --  Put("The length of the vector is: ");
-   --  Put(Length, Aft=>2, Exp=>0);
-   
-   --  New_Line(2);
-   
-   
-   --  -- Testing To_Degree
-   
-   --  Put("Testing To_Degree: "); 
-   --  Get (Rad);
-   --  Degree := To_Degree(Rad);
-   --  Put (Degree, Aft=>2, Exp=>0);
-   
-   
 
    
    -- Huvudmeny
